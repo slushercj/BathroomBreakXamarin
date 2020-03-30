@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using BathroomBreak.Configuration;
 using Foundation;
 using UIKit;
 
@@ -26,7 +27,7 @@ namespace BathroomBreak.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
-            Thread.Sleep(2500);
+            Thread.Sleep(BathroomBreakConstants.SplashScreenTimeout);
 
             return base.FinishedLaunching(app, options);
         }

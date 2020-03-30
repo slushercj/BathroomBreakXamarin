@@ -10,6 +10,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using BathroomBreak.Configuration;
 
 namespace BathroomBreak.Droid
 {
@@ -31,7 +32,7 @@ namespace BathroomBreak.Droid
         {
             base.OnResume();
 
-            Thread.Sleep(2500);
+            Thread.Sleep(BathroomBreakConstants.SplashScreenTimeout);
 
             StartActivity(typeof(MainActivity));
         }
