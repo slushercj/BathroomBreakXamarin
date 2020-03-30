@@ -31,7 +31,7 @@ namespace BathroomBreak.Droid
         {
             base.OnResume();
 
-            Thread.Sleep(5000);
+            Thread.Sleep(2500);
 
             StartActivity(typeof(MainActivity));
         }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Threading;
 using Foundation;
 using UIKit;
 
@@ -25,6 +25,8 @@ namespace BathroomBreak.iOS
             Xamarin.Calabash.Start();
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
+
+            Thread.Sleep(2500);
 
             return base.FinishedLaunching(app, options);
         }
