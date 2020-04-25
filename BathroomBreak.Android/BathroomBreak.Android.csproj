@@ -52,8 +52,8 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.5.0.495" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.2" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.657" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -103,6 +103,14 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable-xxxhdpi\splash.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\background_login.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\background_register.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>

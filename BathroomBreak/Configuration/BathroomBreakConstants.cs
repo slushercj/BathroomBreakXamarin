@@ -3,6 +3,7 @@ namespace BathroomBreak.Configuration
 {
     public static class BathroomBreakConstants
     {
-        public static int SplashScreenTimeout { get { return 2500; } }
+        // 2500 is a good value
+        public static int SplashScreenTimeout { get { return 25; } }
     }
 }

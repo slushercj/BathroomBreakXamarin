@@ -116,6 +116,14 @@
     <ImageAsset Include="Assets.xcassets\Splash.imageset\splash_low.png" />
     <ImageAsset Include="Assets.xcassets\Splash.imageset\splash_medium.png" />
     <ImageAsset Include="Assets.xcassets\Splash.imageset\splash_high.png" />
+    <ImageAsset Include="Assets.xcassets\background_login.imageset\background_login.png" />
+    <ImageAsset Include="Assets.xcassets\background_login.imageset\background_login-1.png" />
+    <ImageAsset Include="Assets.xcassets\background_login.imageset\background_login-2.png" />
+    <ImageAsset Include="Assets.xcassets\background_login.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\background_register.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\background_register.imageset\background_register.png" />
+    <ImageAsset Include="Assets.xcassets\background_register.imageset\background_register-1.png" />
+    <ImageAsset Include="Assets.xcassets\background_register.imageset\background_register-2.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -126,15 +134,17 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.5.0.495" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.657" />
     <PackageReference Include="Xamarin.TestCloud.Agent" Version="0.21.9" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.2" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets.xcassets\Logo.imageset\" />
     <Folder Include="Assets.xcassets\Splash.imageset\" />
     <Folder Include="Assets.xcassets\Splash.imageset\" />
     <Folder Include="Assets.xcassets\Splash.imageset\" />
+    <Folder Include="Assets.xcassets\background_login.imageset\" />
+    <Folder Include="Assets.xcassets\background_register.imageset\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\BathroomBreak\BathroomBreak.projitems" Label="Shared" />
