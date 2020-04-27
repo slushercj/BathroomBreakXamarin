@@ -67,6 +67,7 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderers\BathroomBreakEntryRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -124,6 +125,18 @@
     <ImageAsset Include="Assets.xcassets\background_register.imageset\background_register.png" />
     <ImageAsset Include="Assets.xcassets\background_register.imageset\background_register-1.png" />
     <ImageAsset Include="Assets.xcassets\background_register.imageset\background_register-2.png" />
+    <ImageAsset Include="Assets.xcassets\button_facebook.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\button_google.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\logo.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\button_facebook.imageset\button_facebook.png" />
+    <ImageAsset Include="Assets.xcassets\button_facebook.imageset\button_facebook-1.png" />
+    <ImageAsset Include="Assets.xcassets\button_facebook.imageset\button_facebook-2.png" />
+    <ImageAsset Include="Assets.xcassets\button_google.imageset\button_google.png" />
+    <ImageAsset Include="Assets.xcassets\button_google.imageset\button_google-1.png" />
+    <ImageAsset Include="Assets.xcassets\button_google.imageset\button_google-2.png" />
+    <ImageAsset Include="Assets.xcassets\logo.imageset\logo.png" />
+    <ImageAsset Include="Assets.xcassets\logo.imageset\logo-1.png" />
+    <ImageAsset Include="Assets.xcassets\logo.imageset\logo-2.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -145,6 +158,10 @@
     <Folder Include="Assets.xcassets\Splash.imageset\" />
     <Folder Include="Assets.xcassets\background_login.imageset\" />
     <Folder Include="Assets.xcassets\background_register.imageset\" />
+    <Folder Include="Assets.xcassets\button_facebook.imageset\" />
+    <Folder Include="Assets.xcassets\button_google.imageset\" />
+    <Folder Include="Assets.xcassets\logo.imageset\" />
+    <Folder Include="Renderers\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\BathroomBreak\BathroomBreak.projitems" Label="Shared" />

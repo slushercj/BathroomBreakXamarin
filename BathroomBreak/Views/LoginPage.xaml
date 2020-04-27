@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:custom="clr-namespace:BathroomBreak.CustomControls"
+    x:Class="BathroomBreak.Views.LoginPage"
+    BackgroundImage="background_login.png" Padding="5">
+
+    <ContentPage.Resources>
+
+        <!-- Colors -->
+        <Color x:Key="SigninButtonBackgroundColor">#146464</Color>
+        <Color x:Key="TextColor">White</Color>
+        <Color x:Key="PlaceholderColor">Red</Color>
+
+        <!-- Images -->
+        <Style x:Key="LogoStyle" TargetType="Image">
+            <Setter Property="Scale" Value=".9" />
+            <Setter Property="Margin" Value="0, 50, 0, 0" />
+            <Setter Property="Opacity" Value=".8" />
+        </Style>
+
+        <!-- Labels -->
+        <Style x:Key="TitleStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="54" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="Times" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+            <Setter Property="Opacity" Value=".85" />
+        </Style>
+
+        <Style x:Key="CreateAccountTextStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="LightGray" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="Opacity" Value=".75" />
+            <Setter Property="FontSize" Value="12" />
+        </Style>
+
+        <Style x:Key="CredentialIconStyle" TargetType="Label">
+            <Setter Property="Opacity" Value=".6" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            <Setter Property="HorizontalOptions" Value="End" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontFamily" Value="fa" />
+            <Setter Property="FontSize" Value="26" />
+            <Setter Property="Margin" Value="0,0,7,0" />
+        </Style>
+
+        <!-- Entrys -->
+        <Style x:Key="CredentialsEntryStyle" TargetType="custom:BackgroundBreakEntry">
+            <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+            <Setter Property="PlaceholderColor" Value="White" />
+            <Setter Property="FontFamily" Value="Myriad" />
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+        </Style>
+
+        <!-- Buttons -->
+        <Style x:Key="SigninButtonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource SigninButtonBackgroundColor}" />
+            <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+            <Setter Property="Margin" Value="32,15,32,15" />
+            <Setter Property="FontFamily" Value="Myriad" />
+            <Setter Property="CornerRadius" Value="20" />
+        </Style>
+
+        <Style x:Key="ForgotPasswordButtonStyle" TargetType="Button">
+            <Setter Property="WidthRequest" Value="160" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="FontSize" Value="7" />
+            <Setter Property="FontFamily" Value="Myriad" />
+            <Setter Property="HorizontalOptions" Value="End" />
+            <Setter Property="TextColor" Value="LightGray" />
+            <Setter Property="Padding" Value="0" />
+        </Style>
+
+        <Style x:Key="ImageButtonStyle" TargetType="ImageButton">
+            <Setter Property="Aspect" Value="AspectFill" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="Margin" Value="40, 0, 40, 0" />
+        </Style>
+
+        <Style x:Key="CreateAccountButtonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="FontSize" Value="10" />
+            <Setter Property="FontFamily" Value="Myriad" />
+            <Setter Property="HorizontalOptions" Value="End" />
+            <Setter Property="TextColor" Value="WhiteSmoke" />
+        </Style>
+
+        <!-- Layouts -->
+        <Style x:Key="CreateAccountLayout" TargetType="StackLayout">
+            <Setter Property="Orientation" Value="Horizontal" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+        </Style>
+
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <!-- 0 Logo Image -->
+            <RowDefinition Height=".35*" />
+            <!-- 1 Title Label -->
+            <RowDefinition Height=".14*"/>
+            <!-- 2  Email Entry -->
+            <RowDefinition Height=".08*"/>
+            <!-- 3 Password Entry -->
+            <RowDefinition Height=".08*"/>
+            <!-- 4 Forgot Password Button -->
+            <RowDefinition Height=".03*"/>
+            <!-- 5 Signin Button -->
+            <RowDefinition>
+                <RowDefinition.Height>
+                    <OnPlatform x:TypeArguments="GridLength" iOS=".1*" Android=".12*" />
+                </RowDefinition.Height>
+            </RowDefinition>
+            <!-- 6 Facebook Button -->
+            <RowDefinition Height=".05*"/>
+            <!-- 7 Google Button -->
+            <RowDefinition Height=".05*"/>
+            <!-- 8 Register Button -->
+            <RowDefinition Height=".05*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".1*"/>
+            <ColumnDefinition Width=".8*"/>
+            <ColumnDefinition Width=".1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image x:Name="Logo" Grid.Row="0" Grid.ColumnSpan="3" Source="logo.png" Style="{StaticResource LogoStyle}" />
+
+        <Label Grid.Row="1" Grid.ColumnSpan="3" Text="Bathroom Break" Style="{StaticResource TitleStyle}" />
+
+        <Label Grid.Row="2" Grid.Column="0" Text="&#xf007;" Style="{StaticResource CredentialIconStyle}" />
+        <custom:BackgroundBreakEntry x:Name="EmailEntry" Grid.Row="2" Grid.Column="1" Placeholder="Email" Keyboard="Email" Style="{StaticResource CredentialsEntryStyle}" Visual="Material" />
+        
+        <Label Grid.Row="3" Grid.Column="0" Text="&#xf023;" Style="{StaticResource CredentialIconStyle}"  />
+        <custom:BackgroundBreakEntry x:Name="PasswordEntry" Grid.Row="3" Grid.Column="1" Placeholder="Password" IsPassword="True" Style="{StaticResource CredentialsEntryStyle}" />
+
+        <Button x:Name="ForgotPasswordButton" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Text="Forgot Password" Style="{StaticResource ForgotPasswordButtonStyle}" />
+
+        <Button x:Name="SigninButton" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Text="Sign In" Style="{StaticResource SigninButtonStyle}" />
+
+        <ImageButton x:Name="FacebookButton" Grid.Row="6" Grid.Column="1" Source="button_facebook.png" Style="{StaticResource ImageButtonStyle}" />
+
+        <ImageButton x:Name="GoogleButton" Grid.Row="7" Grid.Column="1" Source="button_google.png" Style="{StaticResource ImageButtonStyle}" />
+
+        <StackLayout Grid.Row="8" Grid.ColumnSpan="3" Style="{StaticResource CreateAccountLayout}">
+            <Label Text="Don't have an account?" Style="{StaticResource CreateAccountTextStyle}" />
+            <Button x:Name="CreateAccountButton" Text="Register" Style="{StaticResource CreateAccountButtonStyle}" />
+        </StackLayout>
+    </Grid>
+</ContentPage>
