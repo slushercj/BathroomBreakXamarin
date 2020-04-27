@@ -21,11 +21,12 @@ namespace BathroomBreak.iOS.Renderers
                 return;
 
             Control.BorderStyle = UITextBorderStyle.None;
+            var color = 110;
 
             _line = new CALayer
             {
-                BorderColor = UIColor.FromRGB(174, 174, 174).CGColor,
-                BackgroundColor = UIColor.FromRGB(174, 174, 174).CGColor,
+                BorderColor = UIColor.FromRGB(color, color, color).CGColor,
+                BackgroundColor = UIColor.FromRGB(color, color, color).CGColor,
                 Frame = new CGRect(0, Frame.Height + (Frame.Height/2), Frame.Width * 2, 1f)
             };
 

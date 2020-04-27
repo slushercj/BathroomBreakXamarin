@@ -21,11 +21,12 @@ namespace BathroomBreak.Droid.Renderers
             base.OnElementChanged(e);
 
             if (Control == null || e.NewElement == null) return;
+            var color = 255;
 
             if (Build.VERSION.SdkInt >= BuildVersionCodes.Lollipop)
-                Control.BackgroundTintList = ColorStateList.ValueOf(Android.Graphics.Color.White);
+                Control.BackgroundTintList = ColorStateList.ValueOf(new Android.Graphics.Color(color, color, color, 80));
             else
-                Control.Background.SetColorFilter(Android.Graphics.Color.White, PorterDuff.Mode.SrcAtop);
+                Control.Background.SetColorFilter(Android.Graphics.Color.LightGray, PorterDuff.Mode.SrcAtop);
         }
     }
 }

@@ -12,11 +12,15 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Fonts\Myriad Pro Regular.ttf" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Fonts\Times New Roman.ttf" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Fonts\Font Awesome.ttf" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\LoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Fonts\fa-brands-400.ttf" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Fonts\fa-duotone-900.ttf" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Fonts\fa-light-300.ttf" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Fonts\fa-regular-400.ttf" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Fonts\fa-solid-900.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
