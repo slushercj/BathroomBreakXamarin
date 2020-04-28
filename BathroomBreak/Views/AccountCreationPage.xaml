@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:BathroomBreak.CustomControls"
+             BackgroundImage="background_register.png"
+             NavigationPage.HasNavigationBar="False"
+             Padding="15"
+             x:Class="BathroomBreak.Views.AccountCreationPage">
+
+    <ContentPage.Resources>
+        <!-- Colors -->
+        <Color x:Key="TermsAndConditionsColor">#4196FC</Color>
+
+        <!-- Labels -->
+        <Style x:Key="NewAccountTitleStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="30" />
+            <Setter Property="HorizontalTextAlignment" Value="Start" />
+            <Setter Property="FontFamily" Value="Myriad" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="FloralWhite" />
+            <Setter Property="Opacity" Value=".9" />
+        </Style>
+        
+        <Style x:Key="TermsAndConditionsStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource TermsAndConditionsColor}" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="FontFamily" Value="Myriad" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        </Style>
+        
+        <Style x:Key="BackArrowIconStyle" TargetType="Label" BasedOn="{StaticResource FontAwesomeLightStyle}">
+            <Setter Property="Opacity" Value=".55" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            <Setter Property="HorizontalOptions" Value="End" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontSize" Value="21" />
+            <Setter Property="Margin" Value="0,0,7,0" />
+        </Style>
+
+        <Style x:Key="CredentialIconStyle" TargetType="Label" BasedOn="{StaticResource FontAwesomeLightStyle}">
+            <Setter Property="Opacity" Value=".5" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            <Setter Property="HorizontalOptions" Value="End" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontSize" Value="21" />
+            <Setter Property="Margin" Value="0,0,7,0" />
+        </Style>
+
+        <Style x:Key="CameraIconStyle" TargetType="Label" BasedOn="{StaticResource FontAwesomeSolidStyle}">
+            <Setter Property="Opacity" Value=".1" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontSize" Value="120" />
+            <Setter Property="Margin" Value="0,0,7,0" />
+        </Style>
+        
+        <!-- Buttons -->
+        <Style x:Key="CreateAccountButtonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource SigninButtonBackgroundColor}" />
+            <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+            <Setter Property="Margin" Value="32,15,32,5" />
+            <Setter Property="FontFamily" Value="Myriad" />
+            <Setter Property="CornerRadius" Value="20" />
+            <Setter Property="VerticalOptions" Value="End" />
+        </Style>
+        
+        <!-- Checkbox -->
+        <Style x:Key="TermsAndConditionsCheckbox" TargetType="CheckBox">
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <!-- 0 Arrow button -->
+                <RowDefinition Height=".18*" />
+                <!-- 1 Title Label -->
+                <RowDefinition Height=".09*"/>
+                <!-- 2 Camera -->
+                <RowDefinition Height=".22*"/>
+                <!-- 3 Name Entry -->
+                <RowDefinition Height=".08*"/>
+                <!-- 4 Email Entry -->
+                <RowDefinition Height=".08*"/>
+                <!-- 5 Password Entry -->
+                <RowDefinition Height=".08*" />
+                <!-- 6 Confirm Password Entry -->
+                <RowDefinition Height=".08*"/>
+                <!-- 7 Create Button -->
+                <RowDefinition Height=".14*"/>
+                <!-- 8 Terms & Conditions Checkbox -->
+                <RowDefinition Height=".04*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".12*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="26" FontFamily="FontAwesomeSolid" HorizontalOptions="Start" VerticalOptions="End" Text="&#xf060;" Style="{StaticResource BackArrowIconStyle}" />
+
+            <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Text="New Account" Style="{StaticResource NewAccountTitleStyle}" />
+            
+            <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="&#xf111;" Style="{StaticResource CameraIconStyle}" />
+            <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" FontSize="40" HorizontalOptions="CenterAndExpand" Opacity=".55" Text="&#xf030;" Style="{StaticResource CredentialIconStyle}" />
+
+            <Label Grid.Row="3" Grid.Column="0" Text="&#xf007;" Style="{StaticResource CredentialIconStyle}" />
+            <custom:BackgroundBreakEntry Grid.Row="3" Grid.Column="1" HorizontalOptions="Fill" Placeholder="Name" Style="{StaticResource CredentialsEntryStyle}" />
+            
+            <Label Grid.Row="4" Grid.Column="0" Text="&#xf0e0;" Style="{StaticResource CredentialIconStyle}" />
+            <custom:BackgroundBreakEntry Grid.Row="4" Grid.Column="1" Placeholder="Email" Style="{StaticResource CredentialsEntryStyle}" />
+            
+            <Label Grid.Row="5" Grid.Column="0" Text="&#xf30d;" Style="{StaticResource CredentialIconStyle}" />
+            <custom:BackgroundBreakEntry Grid.Row="5" Grid.Column="1" Placeholder="Password" IsPassword="True" Style="{StaticResource CredentialsEntryStyle}" />
+            
+            <Label Grid.Row="6" Grid.Column="0" Text="&#xf30d;" Style="{StaticResource CredentialIconStyle}" />
+            <custom:BackgroundBreakEntry Grid.Row="6" Grid.Column="1" Placeholder="Confirm Password" IsPassword="True" Style="{StaticResource CredentialsEntryStyle}" />
+
+            <Button x:Name="CreateAccountButton" Grid.Row="7" Grid.ColumnSpan="2" Text="Create" Style="{StaticResource CreateAccountButtonStyle}" IsEnabled="{Binding IsAcceptedTermsAndConditions}" Clicked="CreateAccountButton_Clicked" />
+
+            <StackLayout Orientation="Horizontal" Grid.Row="8" Grid.ColumnSpan="2" HorizontalOptions="Center">
+                <CheckBox x:Name="TermsAndConditionsCheckBox" IsChecked="{Binding IsAcceptedTermsAndConditions}" />
+                <Label Style="{StaticResource TermsAndConditionsStyle}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Terms &amp; Conditions" >
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ClickCommand}" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -21,6 +21,10 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Fonts\fa-light-300.ttf" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Fonts\fa-regular-400.ttf" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Fonts\fa-solid-900.ttf" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AccountCreationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -34,6 +38,10 @@
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Custom Controls\BackgroundBreakEntry.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AccountCreationPage.xaml.cs">
+      <DependentUpon>AccountCreationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AccountViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />
