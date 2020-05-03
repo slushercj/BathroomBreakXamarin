@@ -46,13 +46,12 @@
             <Setter Property="Margin" Value="0,0,7,0" />
         </Style>
 
-        <Style x:Key="CameraIconStyle" TargetType="Label" BasedOn="{StaticResource FontAwesomeSolidStyle}">
-            <Setter Property="Opacity" Value=".1" />
+        <Style x:Key="CameraButtonStyle" TargetType="Image">
+            <Setter Property="Opacity" Value="1" />
+            <Setter Property="Aspect" Value="AspectFit" />
             <Setter Property="VerticalOptions" Value="CenterAndExpand" />
             <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
-            <Setter Property="TextColor" Value="White" />
-            <Setter Property="FontSize" Value="120" />
-            <Setter Property="Margin" Value="0,0,7,0" />
+            <Setter Property="Margin" Value="0,0,0,0" />
         </Style>
         
         <!-- Buttons -->
@@ -105,8 +104,9 @@
             <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Text="New Account" Style="{StaticResource NewAccountTitleStyle}" />
 
             <!-- Camera -->
-            <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="&#xf111;" Style="{StaticResource CameraIconStyle}" />
-            <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" FontSize="40" HorizontalOptions="CenterAndExpand" Opacity=".55" Text="&#xf030;" Style="{StaticResource CredentialIconStyle}" />
+            <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="&#xf111;" FontFamily="FontAwesomeSolid" FontSize="120" TextColor="White" Opacity=".1" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+
+            <ImageButton x:Name="CameraButton" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Source="icon_camera.png" Style="{StaticResource CameraButtonStyle}" BackgroundColor="Transparent" Scale=".4" Opacity=".6" Clicked="CameraButton_Clicked" />
 
             <!-- Name -->
             <Label Grid.Row="3" Grid.Column="0" Text="&#xf007;" Style="{StaticResource CredentialIconStyle}" />

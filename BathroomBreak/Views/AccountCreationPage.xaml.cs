@@ -24,5 +24,10 @@ namespace BathroomBreak.Views
         {
             await Navigation.PopAsync();
         }
+
+        void CameraButton_Clicked(System.Object sender, System.EventArgs e)
+        {
+            DisplayAlert("Camera", "Camera button clicked", "Done");
+        }
     }
 }
