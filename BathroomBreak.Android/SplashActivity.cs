@@ -14,7 +14,7 @@ using BathroomBreak.Configuration;
 
 namespace BathroomBreak.Droid
 {
-    [Activity(Label = "SplashActivity", Icon = "@mipmap/icon", Theme = "@style/splash_screen", MainLauncher = true, NoHistory = true)]
+    [Activity(Label = "Bathroom Break", Icon = "@drawable/logo", Theme = "@style/splash_screen", MainLauncher = true, NoHistory = true)]
     public class SplashActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
