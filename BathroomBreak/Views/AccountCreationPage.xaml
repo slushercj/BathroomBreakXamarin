@@ -97,28 +97,37 @@
                 <ColumnDefinition Width=".12*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            
+
+            <!-- Back button-->
             <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="26" FontFamily="FontAwesomeSolid" HorizontalOptions="Start" VerticalOptions="End" Text="&#xf060;" Style="{StaticResource BackArrowIconStyle}" />
 
+            <!-- Title -->
             <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Text="New Account" Style="{StaticResource NewAccountTitleStyle}" />
-            
+
+            <!-- Camera -->
             <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="&#xf111;" Style="{StaticResource CameraIconStyle}" />
             <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" FontSize="40" HorizontalOptions="CenterAndExpand" Opacity=".55" Text="&#xf030;" Style="{StaticResource CredentialIconStyle}" />
 
+            <!-- Name -->
             <Label Grid.Row="3" Grid.Column="0" Text="&#xf007;" Style="{StaticResource CredentialIconStyle}" />
             <custom:BackgroundBreakEntry Grid.Row="3" Grid.Column="1" HorizontalOptions="Fill" Placeholder="Name" Style="{StaticResource CredentialsEntryStyle}" />
-            
+
+            <!-- Email -->
             <Label Grid.Row="4" Grid.Column="0" Text="&#xf0e0;" Style="{StaticResource CredentialIconStyle}" />
             <custom:BackgroundBreakEntry Grid.Row="4" Grid.Column="1" Placeholder="Email" Style="{StaticResource CredentialsEntryStyle}" />
-            
+
+            <!-- Password -->
             <Label Grid.Row="5" Grid.Column="0" Text="&#xf30d;" Style="{StaticResource CredentialIconStyle}" />
             <custom:BackgroundBreakEntry Grid.Row="5" Grid.Column="1" Placeholder="Password" IsPassword="True" Style="{StaticResource CredentialsEntryStyle}" />
-            
+
+            <!-- Confirm Password -->
             <Label Grid.Row="6" Grid.Column="0" Text="&#xf30d;" Style="{StaticResource CredentialIconStyle}" />
             <custom:BackgroundBreakEntry Grid.Row="6" Grid.Column="1" Placeholder="Confirm Password" IsPassword="True" Style="{StaticResource CredentialsEntryStyle}" />
 
+            <!-- Create Account Button -->
             <Button x:Name="CreateAccountButton" Grid.Row="7" Grid.ColumnSpan="2" Text="Create" Style="{StaticResource CreateAccountButtonStyle}" IsEnabled="{Binding IsAcceptedTermsAndConditions}" Clicked="CreateAccountButton_Clicked" />
 
+            <!-- Terms & Conditions -->
             <StackLayout Orientation="Horizontal" Grid.Row="8" Grid.ColumnSpan="2" HorizontalOptions="Center">
                 <CheckBox x:Name="TermsAndConditionsCheckBox" IsChecked="{Binding IsAcceptedTermsAndConditions}" />
                 <Label Style="{StaticResource TermsAndConditionsStyle}">
