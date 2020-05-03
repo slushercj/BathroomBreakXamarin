@@ -28,12 +28,12 @@
             <Setter Property="VerticalOptions" Value="CenterAndExpand" />
         </Style>
         
-        <Style x:Key="BackArrowIconStyle" TargetType="Label" BasedOn="{StaticResource FontAwesomeLightStyle}">
+        <Style x:Key="BackArrowButtonStyle" TargetType="ImageButton">
             <Setter Property="Opacity" Value=".55" />
-            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
-            <Setter Property="HorizontalOptions" Value="End" />
-            <Setter Property="TextColor" Value="White" />
-            <Setter Property="FontSize" Value="21" />
+            <Setter Property="Scale" Value=".65" />
+            <Setter Property="Aspect" Value="AspectFit" />
+            <Setter Property="VerticalOptions" Value="End" />
+            <Setter Property="HorizontalOptions" Value="Start" />
             <Setter Property="Margin" Value="0,0,7,0" />
         </Style>
 
@@ -99,7 +99,7 @@
             </Grid.ColumnDefinitions>
 
             <!-- Back button-->
-            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="26" FontFamily="FontAwesomeSolid" HorizontalOptions="Start" VerticalOptions="End" Text="&#xf060;" Style="{StaticResource BackArrowIconStyle}" />
+            <ImageButton x:Name="BackButton" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Transparent" Source="icon_back.png" Style="{StaticResource BackArrowButtonStyle}" Clicked="BackButton_Clicked"  />
 
             <!-- Title -->
             <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Text="New Account" Style="{StaticResource NewAccountTitleStyle}" />

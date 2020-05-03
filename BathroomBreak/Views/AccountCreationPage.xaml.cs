@@ -19,5 +19,10 @@ namespace BathroomBreak.Views
         {
             DisplayAlert("Create Account", "Creating account", "OK");
         }
+
+        async void BackButton_Clicked(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
     }
 }
