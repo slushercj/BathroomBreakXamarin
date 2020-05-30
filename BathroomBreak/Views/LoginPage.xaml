@@ -127,7 +127,7 @@
 
         <Button x:Name="ForgotPasswordButton" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Text="Forgot Password" Style="{StaticResource ForgotPasswordButtonStyle}" />
 
-        <Button x:Name="SigninButton" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Text="Sign In" Style="{StaticResource SigninButtonStyle}" />
+        <Button x:Name="SigninButton" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Text="Sign In" Style="{StaticResource SigninButtonStyle}" Clicked="SigninButton_Clicked" />
 
         <ImageButton x:Name="FacebookButton" Grid.Row="6" Grid.Column="1" Source="button_facebook.png" Style="{StaticResource ImageButtonStyle}" />
 

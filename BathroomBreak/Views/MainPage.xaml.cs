@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace BathroomBreak.Views
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage : MasterDetailPage
     {
         public MainPage()
         {

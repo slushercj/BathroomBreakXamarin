@@ -1,5 +1,38 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BathroomBreak.Views.SideMenu">
-    <ContentPage.Content>
-    </ContentPage.Content>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="BathroomBreak.Views.SideMenu"
+    xmlns:model="clr-namespace:BathroomBreak.Models"
+    xmlns:bathroomBreak="clr-namespace:BathroomBreak.Views"
+    Title="Bathroom Break">
+    <StackLayout>
+        
+        <ListView x:Name="NavigationListView" x:FieldModifier="public">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type model:MasterNavigationItem}">
+                    <model:MasterNavigationItem Title="Username" Icon="icon_back.png" Target="{x:Type bathroomBreak:Map}" />
+                    <model:MasterNavigationItem Title="Logout" Icon="icon_back.png" Target="{x:Type bathroomBreak:Map}" />
+                    <model:MasterNavigationItem Title="Rating" Icon="icon_back.png" Target="{x:Type bathroomBreak:Map}" />
+                    <model:MasterNavigationItem Title="Add" Icon="icon_back.png" Target="{x:Type bathroomBreak:Map}" />
+                    <model:MasterNavigationItem Title="Report" Icon="icon_back.png" Target="{x:Type bathroomBreak:Map}" />
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding Icon}" />
+                            <Label Grid.Column="1" Text="{Binding Title}" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
 </ContentPage>
