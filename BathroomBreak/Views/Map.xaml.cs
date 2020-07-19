@@ -42,13 +42,10 @@ namespace BathroomBreak.Views
 
             BindingContext = currentLocation;
 
-            MainMap.Pins.Add(new Pin
-            {
-                Label = "Current Location",
-                Type = PinType.Generic,
-                Position = position
-            });
+            // Show current location
+            MainMap.IsShowingUser = true;
 
+            // Other bathrooms
             foreach(var br in result)
             {
                 MainMap.Pins.Add(new Pin
