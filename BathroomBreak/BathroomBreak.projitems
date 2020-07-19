@@ -66,6 +66,8 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\Bathroom.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MapViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\RestService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\SearchResponse.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />
@@ -75,5 +77,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)Resources\" />
     <Folder Include="$(MSBuildThisFileDirectory)Resources\Fonts\" />
     <Folder Include="$(MSBuildThisFileDirectory)Custom Controls\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\" />
   </ItemGroup>
 </Project>
