@@ -6,16 +6,29 @@
     xmlns:model="clr-namespace:BathroomBreak.Models"
     xmlns:bathroomBreak="clr-namespace:BathroomBreak.Views"
     Title="Bathroom Break">
-    <StackLayout>
+
+    <ContentPage.Resources>
         
+        <Style x:Key="CredentialIconStyle" TargetType="Label" BasedOn="{StaticResource FontAwesomeLightStyle}">
+            <Setter Property="Opacity" Value=".5" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            <Setter Property="HorizontalOptions" Value="End" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="FontSize" Value="32" />
+            <Setter Property="Margin" Value="0,0,10,0" />
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout>
+
         <ListView x:Name="NavigationListView" x:FieldModifier="public">
             <ListView.ItemsSource>
                 <x:Array Type="{x:Type model:MasterNavigationItem}">
-                    <model:MasterNavigationItem Title="Username" Icon="icon_back.png" Target="{x:Type bathroomBreak:Map}" />
-                    <model:MasterNavigationItem Title="Logout" Icon="icon_back.png" Target="{x:Type bathroomBreak:Map}" />
-                    <model:MasterNavigationItem Title="Rating" Icon="icon_back.png" Target="{x:Type bathroomBreak:Map}" />
-                    <model:MasterNavigationItem Title="Add" Icon="icon_back.png" Target="{x:Type bathroomBreak:Map}" />
-                    <model:MasterNavigationItem Title="Report" Icon="icon_back.png" Target="{x:Type bathroomBreak:Map}" />
+                    <model:MasterNavigationItem Title="Username" Icon="&#xf030;" Target="{x:Type bathroomBreak:Map}" />
+                    <model:MasterNavigationItem Title="Logout" Icon="&#xf08b;" Target="{x:Type bathroomBreak:Map}" />
+                    <model:MasterNavigationItem Title="Rating" Icon="&#xf005;" Target="{x:Type bathroomBreak:Map}" />
+                    <model:MasterNavigationItem Title="Add" Icon="&#xf067;" Target="{x:Type bathroomBreak:Map}" />
+                    <model:MasterNavigationItem Title="Report" Icon="&#xf00c;" Target="{x:Type bathroomBreak:Map}" />
                 </x:Array>
             </ListView.ItemsSource>
             <ListView.ItemTemplate>
@@ -23,16 +36,19 @@
                     <ViewCell>
                         <Grid Padding="5">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="50"/>
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
-                            <Image Source="{Binding Icon}" />
-                            <Label Grid.Column="1" Text="{Binding Title}" />
+                            <Label Text="{Binding Icon}" Style="{StaticResource CredentialIconStyle}" />
+                            <Label Grid.Column="1" Text="{Binding Title}" TextColor="#187576" FontSize="27" FontAttributes="" />
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-
+        <StackLayout Margin="50">
+            <Image Source="logo.png" Margin="0" WidthRequest="200" HeightRequest="200" />
+            <Label Text="Bathroom Break" TextColor="#187576" FontFamily="Times" FontSize="37" Margin="0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
     </StackLayout>
 </ContentPage>

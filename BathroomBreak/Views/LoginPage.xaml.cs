@@ -22,8 +22,15 @@ namespace BathroomBreak.Views
 
         public async void SigninButton_Clicked(System.Object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new MainPage());
-            //MainPage = new MainPage();
+            try
+            {
+                //await Navigation.PushAsync(new MainPage());
+                Application.Current.MainPage = new MainPage();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
     }
 }

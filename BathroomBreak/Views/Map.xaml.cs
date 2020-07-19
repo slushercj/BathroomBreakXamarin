@@ -42,9 +42,6 @@ namespace BathroomBreak.Views
 
             BindingContext = currentLocation;
 
-            // Show current location
-            MainMap.IsShowingUser = true;
-
             // Other bathrooms
             foreach(var br in result)
             {
@@ -57,7 +54,8 @@ namespace BathroomBreak.Views
                 });
             }
 
-            MainMap.MoveToRegion(MapSpan.FromCenterAndRadius(currentLocation.Position, new Distance(500)));
+            MainMap.BathroomBreakPins = new List<CustomControls.BathroomBreakPin>();
+            MainMap.MoveToRegion(MapSpan.FromCenterAndRadius(currentLocation.Position, Distance.FromMiles(.375)));
         }
 
         public async Task<Xamarin.Essentials.Location> GetLocation()

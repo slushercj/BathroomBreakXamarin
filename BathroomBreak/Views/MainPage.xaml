@@ -9,7 +9,7 @@
         <local:SideMenu x:Name="MasterView"></local:SideMenu>
     </MasterDetailPage.Master>
     <MasterDetailPage.Detail>
-        <NavigationPage>
+        <NavigationPage BarBackgroundColor="#187576" BarTextColor="White" Title="Bathroom Break">
             <x:Arguments>
                 <local:Map></local:Map>
             </x:Arguments>

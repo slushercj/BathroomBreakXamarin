@@ -68,6 +68,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MapViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\RestService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\SearchResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Custom Controls\BathroomBreakMap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Custom Controls\BathroomBreakPin.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />

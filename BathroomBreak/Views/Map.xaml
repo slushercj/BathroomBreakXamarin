@@ -2,19 +2,19 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:map="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+    xmlns:map="clr-namespace:BathroomBreak.CustomControls"
     x:Class="BathroomBreak.Views.Map">
     <ContentPage.Content>
         <Grid>
-            <map:Map x:Name="MainMap" MapType="Street" HasZoomEnabled="True">
-                <map:Map.ItemTemplate>
+            <map:BathroomBreakMap x:Name="MainMap" MapType="Street" HasZoomEnabled="True" IsShowingUser="True" >
+                <map:BathroomBreakMap.ItemTemplate>
                     <DataTemplate>
-                        <map:Pin Position="{Binding Position}"
+                        <map:BathroomBreakPin Position="{Binding Position}"
                                  Address="{Binding Address}"
                                  Label="{Binding PlaceName}" />
                     </DataTemplate>
-                </map:Map.ItemTemplate>
-            </map:Map>
+                </map:BathroomBreakMap.ItemTemplate>
+            </map:BathroomBreakMap>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
